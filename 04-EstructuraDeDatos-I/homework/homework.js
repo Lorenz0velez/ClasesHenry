@@ -23,7 +23,7 @@ function nFactorial(n) {
   }
   else if ( n < 0) {return 0};
 
-  return n * nFactorial(n - 1);
+   return n * nFactorial(n - 1);
 }
 
 function nFibonacci(n) {
@@ -47,7 +47,7 @@ Definir los siguientes métodos:
 Pueden utilizar class o función constructora.
 */
 
-function Queue() {
+/* function Queue() {
   this.array = [];
 }
 
@@ -59,7 +59,42 @@ Queue.prototype.dequeue = function (){   // El primer elemento que ingreso es el
 }
 Queue.prototype.size = function (){   
   return this.array.length; 
+} */ //--> Esta fue MI forma de resolverlo con mis compañeros.
+
+
+ // --> Esta fue la forma del PROFE de resolverlo con una clase.
+
+
+
+
+
+
+
+class Queue {
+  constructor(){
+    this.data = [];
+  }
 }
+ Queue.prototype.enqueue = function(value){
+   this.data.push(value);
+ }
+ Queue.prototype.dequeue = function(){
+  return this.data.shift();
+}
+Queue.prototype.size = function(){
+ return this.data.length;
+}
+const miQueue = new Queue()
+console.log(miQueue);
+
+
+
+
+
+
+
+
+
 
 // No modifiquen nada debajo de esta linea
 // --------------------------------
